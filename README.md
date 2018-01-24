@@ -1,8 +1,6 @@
-
-
 # KVC中的集合运算符
 
-当使用`KVC`中的`valueForKeyPath`方法时，可以在路径中嵌入一个集合运算。一个集合运算符上一个小的关键词列表之一，前面用`@`符号开头，它指定`getter`在返回之前以某种方式处理数据。其方法由`NSObject`的`valueForKeyPath`默认实现。
+当使用`KVC`中的`valueForKeyPath`方法时，可以在路径中嵌入一个集合运算。一个集合运算符前面用`@`符号开头。
 
 # 集合运算符组成
 
@@ -280,6 +278,8 @@ NSArray *unionOfArrays = [arrays valueForKeyPath:@"@unionOfArrays.payee"];
 * 嵌套操作符`distinctUnionOfArrays`可以是对`distinctUnionOfObjects`方法的一个完善。对于两层嵌套数据可以取出属性并做去重处理，对于多于两层的嵌套，内部数据将不再做去重去里。在这里`unionOfObjects`和`unionOfArrays`处理结果一致。
 
 
-参考：[Key-Value Coding Programming Guide](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueCoding/CollectionOperators.html#//apple_ref/doc/uid/20002176-SW3)
 
+Demo：Github
+
+参考：[Key-Value Coding Programming Guide](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueCoding/CollectionOperators.html#//apple_ref/doc/uid/20002176-SW3)
 
